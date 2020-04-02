@@ -1,9 +1,21 @@
-const connection = require('../database/connection')
+const connection = require('../database/connection') // para fazer operações com o banco de dados
 
 module.exports = {
     async index(request,response) {
-        const incidents = await connection('incidents').select("*")
-    
+
+        const {page = 1}= request.query //criar paginação
+
+        const [count] = await connection('incidents').count() //contagem de quantos dados tem
+
+        const incidents = await connection('incidents')
+            .limit(5) //pegar cinco casos por pagina
+            .offset((page-1)*5)
+            .select("*")
+            //o que foi feito a cima vai fazer com que seja apresentado cinco casos por pagina
+            //para buscar a proxima pagina ficaria: http://localhost:3333/incidents?page=2
+        
+        response.header('X-Total-Count',count['count(*)']) //apresentar no cabeçalho a quantidade de casos
+        
         return response.json(incidents)
     },
 

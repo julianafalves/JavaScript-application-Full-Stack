@@ -1,5 +1,5 @@
 /* Modularizando a criação de tabelas ong*/
-const connection = require('../database/connection')
+const connection = require('../database/connection') // para fazer operações com o banco de dados
 const crypto = require('crypto')
 
 module.exports={
