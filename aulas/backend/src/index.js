@@ -48,10 +48,12 @@ Driver: SELECT * FROM user
 Query Builder: table('users').select('*').where()
 */
 const express  = require('express') //importa o modolo express
-
+const cors = requiere('cors')
 const routes = require("./routes")
 
 const app = express() //criando aplicação
+
+app.use(cors())
 app.use(express.json()) //expresse ir no corpo da requisição e transformar o json em um objeto js
 
 app.use(routes)
