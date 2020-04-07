@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Logon from './pages/logon'
+import './global.css'
+/*
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Oie Juliana.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Header title= "semana oministack"/>
   );
 }
 
+function App() {
+  const [counter, setCounter] = useState(0) //estado pois uma variavel n mudaria o html no react
+
+  function increment(){
+    setCounter(counter + 1)
+    console.log(counter)
+  }
+
+  return (
+    <div>
+    <Header>Contador: {counter} </Header> 
+    <button onClick={increment}> Incrementar </button>
+    </div>
+  );
+}
+*/
+
+function App() {
+  return(
+    <Logon />
+  )
+}
 export default App;
