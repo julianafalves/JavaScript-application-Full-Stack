@@ -1,6 +1,9 @@
 import React from 'react';
-import Logon from './pages/logon'
+//import Logon from './pages/logon'
 import './global.css'
+import Routes from './routes'
+//import { Route } from 'react-router-dom';
+
 /*
 function App() {
   return (
@@ -27,7 +30,7 @@ function App() {
 
 function App() {
   return(
-    <Logon />
+    <Routes />
   )
 }
 export default App;
