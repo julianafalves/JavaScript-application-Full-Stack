@@ -5,7 +5,7 @@
     margin: 0 auto;
     display: flex; /*deixou o formulario ao lado da imagem heroes*/
     align-items: center; /*alinah horizotalmente*/
-    justify-content: center; /*alinha certicalmente*/
+    justify-content: space-between ; /*alinha certicalmente*/
 }
 
 .logon-container section.form{
